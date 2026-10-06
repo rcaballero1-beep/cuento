@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #34495e;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.upload-container {
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    display: none; /* Ocultamos el input original feo */
+}
+
+.upload-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.upload-btn:hover {
+    background-color: #c0392b;
+}
+
+#loading {
+    display: none;
+    margin-top: 15px;
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+.book-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+}
+
+.flip-book {
+    display: none; /* Oculto hasta que se cargue el PDF */
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.page {
+    background-color: #fff;
+    border: solid 1px #bdc3c7;
+    overflow: hidden;
+}
+
+.page canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Para ocultar sombras extrañas de la librería cuando no hay nada */
+.stf__wrapper {
+    background-color: transparent !important;
+}

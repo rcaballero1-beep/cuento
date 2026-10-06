@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor de Cuentos PDF con Paginación</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Librería PDF.js para leer el PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <!-- Librería PageFlip para el efecto de pasar página -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Lector de Cuentos</h1>
+        <p>Sube tu cuento en formato PDF para visualizarlo como un libro real.</p>
+        <div class="upload-container">
+            <input type="file" id="pdf-upload" accept="application/pdf" />
+            <label for="pdf-upload" class="upload-btn">Cargar PDF</label>
+        </div>
+        <div id="loading">Cargando y procesando páginas (esto puede demorar unos segundos)...</div>
+    </div>
+
+    <div class="book-container">
+        <!-- El flipbook se generará aquí -->
+        <div id="flip-book" class="flip-book"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
