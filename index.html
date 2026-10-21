@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La niña que guardaba los sueños perdidos</title>
+    <meta name="description" content="Cuento accesible adaptado con lectura en voz alta, pausas contextuales y ajuste de texto para alumnos con baja visión.">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Librerías externas para renderizado PDF y efecto de libro -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
+</head>
+<body>
+    <!-- Capa de puntos de luz cálida / estrellas -->
+    <div class="star-field" aria-hidden="true"></div>
+
+    <header class="header" aria-label="Controles del cuento">
+        <h1>La niña que guardaba los sueños perdidos</h1>
+        <p>Experiencia de lectura accesible con narración adaptada y soporte visual para baja visión.</p>
+
+        <!-- Barra de herramientas (Controles y Accesibilidad) -->
+        <div class="reader-controls" role="toolbar" aria-label="Navegación y opciones de lectura">
+            <button id="voice-btn" class="tool-btn accent" type="button" aria-label="Leer cuento en voz alta en español">🔊 Leer en voz alta</button>
+            <button id="zoom-out-btn" class="tool-btn" type="button" aria-label="Achicar texto">A -</button>
+            <button id="zoom-in-btn" class="tool-btn" type="button" aria-label="Agrandar texto">A +</button>
+            <button id="prev-page-btn" class="tool-btn nav" type="button" aria-label="Ir a la página anterior">◀ Anterior</button>
+            <button id="next-page-btn" class="tool-btn nav" type="button" aria-label="Ir a la página siguiente">Siguiente ▶</button>
+        </div>
+
+        <div id="page-status" class="page-status" aria-live="polite">Cargando el cuento...</div>
+        <div id="loading" class="loading" role="status" aria-live="polite">Procesando "cuento.pdf"...</div>
+    </header>
+
+    <main class="book-shell" aria-label="Visor interactivo del cuento">
+        <!-- Contenedor del libro -->
+        <div id="flip-book" class="flip-book"></div>
+    </main>
+
+    <!-- Área exclusiva para lectores de pantalla -->
+    <div id="sr-status" class="sr-only" role="status" aria-live="assertive" aria-atomic="true"></div>
+
+    <!-- Declaratoria de uso de IAG -->
+    <footer class="declaracion" id="declaracion-iag">
+        <strong>Declaración de uso de Inteligencia Artificial Generativa (IAG):</strong> 
+        Este cuento y su entorno interactivo fueron optimizados mediante herramientas de IA Generativa para brindar apoyo pedagógico, synthesizar lectura fluida en español con pausas por oración e incrementar la accesibilidad de estudiantes con baja visión.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
